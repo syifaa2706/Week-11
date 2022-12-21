@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkMode</title>
+</head>
+<body>
+    <h2>Silahkan klik button untuk mengganti mode gelap</h2>
+    <button onclik="function()">Ubah Warna</button>
+
+    <!-- buat script -->
+    <script>
+        var body = document.querySelector("body");
+        var btn = document.querySelector("button");
+        var darkmode = true;
+
+        //jika kondisi darkmode true maka ubah warna bckground mejadi hitam
+        //jika kondisi darkmode false maka warna bckground menjadi putih
+        btn.addEventListener("click", function(){
+            if(darkmode == true){
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                btn.innerHTML = "Mode Terang";
+                darkmode = false;
+            }else{
+                body.style.backgroundColor = "White"
+                body.style.color = "black";
+                btn.innerHTML = "Mode Gelap";
+                darkmode = true;
+            }
+        })
+    </script>
+</body>
+</html>
